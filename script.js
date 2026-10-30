@@ -121,11 +121,24 @@ function escapeAttr(str) {
 }
 
 // ============ 加载内容 ============
+async function fetchContent() {
+    // 有后端时优先走接口（读取 GitHub 中的最新内容）
+    try {
+        const api = await fetch('api/content?t=' + Date.now());
+        if (api.ok) {
+            const data = await api.json();
+            if (data && data.profile) return data;
+        }
+    } catch { /* 无后端（如 GitHub Pages），走静态文件 */ }
+
+    const res = await fetch('content.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.json();
+}
+
 async function loadContent() {
     try {
-        const res = await fetch('content.json?t=' + Date.now());
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+        const data = await fetchContent();
 
         renderProfile(data.profile || {});
         renderContact(data.contact || {});
