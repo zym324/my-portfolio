@@ -1,0 +1,130 @@
+{
+  "profile": {
+    "greeting": "你好，我是",
+    "name": "张三",
+    "subtitle": "全栈开发工程师 | UI/UX 设计爱好者",
+    "description": "热爱创造优雅的数字体验，专注于构建高性能、可扩展的 Web 应用。",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop&auto=format",
+    "avatarAlt": "头像",
+    "about": [
+      "你好！我是一名充满热情的全栈开发工程师，拥有 5+ 年的 Web 开发经验。我专注于构建现代化、高性能的 Web 应用程序。",
+      "我相信优秀的代码不仅要能运行，更要优雅、可维护。我喜欢在技术与设计之间找到平衡，创造出让用户愉悦的产品体验。",
+      "工作之余，我喜欢阅读技术博客、参与开源项目，以及探索新的技术栈。"
+    ],
+    "aboutImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format",
+    "stats": [
+      { "number": "50+", "label": "完成项目" },
+      { "number": "5+", "label": "年经验" },
+      { "number": "30+", "label": "开源贡献" }
+    ],
+    "socials": [
+      { "name": "GitHub", "url": "#", "icon": "github" },
+      { "name": "LinkedIn", "url": "#", "icon": "linkedin" },
+      { "name": "Twitter", "url": "#", "icon": "twitter" }
+    ]
+  },
+  "contact": {
+    "email": "hello@example.com",
+    "location": "中国 · 北京",
+    "status": "开放合作机会"
+  },
+  "skills": [
+    {
+      "category": "前端开发",
+      "items": [
+        { "name": "React", "icon": "⚛️", "level": 95 },
+        { "name": "Vue.js", "icon": "💚", "level": 90 },
+        { "name": "TypeScript", "icon": "📝", "level": 88 },
+        { "name": "TailwindCSS", "icon": "🎨", "level": 92 }
+      ]
+    },
+    {
+      "category": "后端开发",
+      "items": [
+        { "name": "Node.js", "icon": "🟢", "level": 90 },
+        { "name": "Python", "icon": "🐍", "level": 85 },
+        { "name": "Java", "icon": "☕", "level": 75 },
+        { "name": "PostgreSQL", "icon": "🗄️", "level": 82 }
+      ]
+    },
+    {
+      "category": "工具与 DevOps",
+      "items": [
+        { "name": "Docker", "icon": "🐳", "level": 80 },
+        { "name": "AWS", "icon": "☁️", "level": 72 },
+        { "name": "Git", "icon": "🔧", "level": 95 },
+        { "name": "CI/CD", "icon": "📦", "level": 78 }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "数据可视化平台",
+      "description": "基于 React + D3.js 构建的企业级数据分析仪表板，支持实时数据更新和自定义图表。",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format",
+      "tags": ["React", "D3.js", "TypeScript"],
+      "link": "#"
+    },
+    {
+      "title": "电商平台",
+      "description": "全栈电商解决方案，包含商品管理、订单处理、支付集成和后台管理系统。",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format",
+      "tags": ["Vue.js", "Node.js", "MongoDB"],
+      "link": "#"
+    },
+    {
+      "title": "即时通讯应用",
+      "description": "基于 WebSocket 的实时聊天应用，支持群组、文件传输和端到端加密。",
+      "image": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=500&fit=crop&auto=format",
+      "tags": ["React Native", "WebSocket", "Redis"],
+      "link": "#"
+    },
+    {
+      "title": "AI 图像识别服务",
+      "description": "基于深度学习的图像识别 API 服务，提供高精度的物体检测和分类能力。",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&auto=format",
+      "tags": ["Python", "TensorFlow", "FastAPI"],
+      "link": "#"
+    },
+    {
+      "title": "项目管理工具",
+      "description": "团队协作项目管理平台，支持看板、甘特图、任务分配和进度追踪。",
+      "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=500&fit=crop&auto=format",
+      "tags": ["Next.js", "PostgreSQL", "Prisma"],
+      "link": "#"
+    },
+    {
+      "title": "运动健康 App",
+      "description": "跨平台运动追踪应用，集成 GPS 定位、运动数据统计和社交分享功能。",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format",
+      "tags": ["Flutter", "Firebase", "Google Maps"],
+      "link": "#"
+    }
+  ],
+  "posts": [
+    {
+      "title": "React 18 并发特性深度解析",
+      "excerpt": "深入探讨 React 18 的并发渲染、自动批处理和 Suspense 等新特性如何改善应用性能...",
+      "date": "2026-10-15",
+      "category": "前端开发",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=500&fit=crop&auto=format",
+      "link": "#"
+    },
+    {
+      "title": "从零构建微服务架构的 10 个经验",
+      "excerpt": "分享在实际项目中搭建微服务架构遇到的坑和解决方案，包括服务发现、链路追踪等...",
+      "date": "2026-10-08",
+      "category": "架构设计",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop&auto=format",
+      "link": "#"
+    },
+    {
+      "title": "Docker + K8s 自动化部署实战",
+      "excerpt": "完整的容器化部署流程，从 Dockerfile 编写到 Kubernetes 集群搭建和 CI/CD 集成...",
+      "date": "2026-09-28",
+      "category": "DevOps",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
+      "link": "#"
+    }
+  ]
+}
