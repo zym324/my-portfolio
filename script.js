@@ -38,6 +38,14 @@ function renderProfile(p) {
 
     document.getElementById('footerName').textContent = p.name || 'Portfolio';
     document.title = (p.name ? p.name + ' | 个人主页' : '个人展示网站 | Portfolio');
+
+    // 后台管理入口（地址可在 content.json 的 profile.adminUrl 配置）
+    if (p.adminUrl) {
+        ['navAdminLink', 'footerAdminLink'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) { el.href = p.adminUrl; el.hidden = false; }
+        });
+    }
 }
 
 function renderContact(c) {
