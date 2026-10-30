@@ -35,27 +35,17 @@
         <div class="hero-content">
             <div class="hero-avatar">
                 <div class="avatar-ring"></div>
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop&auto=format" alt="头像" class="avatar-img">
+                <img id="heroAvatar" src="" alt="头像" class="avatar-img">
             </div>
-            <p class="hero-greeting">你好，我是</p>
-            <h1 class="hero-title">张三</h1>
-            <p class="hero-subtitle">全栈开发工程师 | UI/UX 设计爱好者</p>
-            <p class="hero-description">热爱创造优雅的数字体验，专注于构建高性能、可扩展的 Web 应用。</p>
+            <p class="hero-greeting" id="heroGreeting">你好，我是</p>
+            <h1 class="hero-title" id="heroName">加载中…</h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <p class="hero-description" id="heroDescription"></p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">查看项目</a>
                 <a href="#contact" class="btn btn-secondary">联系我</a>
             </div>
-            <div class="hero-socials">
-                <a href="#" class="social-link" aria-label="GitHub">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                </a>
-            </div>
+            <div class="hero-socials" id="heroSocials"></div>
         </div>
         <div class="scroll-indicator">
             <div class="mouse">
@@ -71,26 +61,11 @@
             <h2 class="section-title">关于我</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>你好！我是一名充满热情的全栈开发工程师，拥有 5+ 年的 Web 开发经验。我专注于构建现代化、高性能的 Web 应用程序。</p>
-                    <p>我相信优秀的代码不仅要能运行，更要优雅、可维护。我喜欢在技术与设计之间找到平衡，创造出让用户愉悦的产品体验。</p>
-                    <p>工作之余，我喜欢阅读技术博客、参与开源项目，以及探索新的技术栈。</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">完成项目</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">年经验</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">开源贡献</span>
-                        </div>
-                    </div>
+                    <div id="aboutText"></div>
+                    <div class="about-stats" id="aboutStats"></div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format" alt="工作照">
+                    <img id="aboutImage" src="" alt="工作照">
                 </div>
             </div>
         </div>
@@ -100,105 +75,7 @@
     <section id="skills" class="section skills">
         <div class="container">
             <h2 class="section-title">技能展示</h2>
-            <div class="skills-category">
-                <h3 class="category-title">前端开发</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">⚛️</div>
-                        <h4>React</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">💚</div>
-                        <h4>Vue.js</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">📝</div>
-                        <h4>TypeScript</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🎨</div>
-                        <h4>TailwindCSS</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="92"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-category">
-                <h3 class="category-title">后端开发</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">🟢</div>
-                        <h4>Node.js</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🐍</div>
-                        <h4>Python</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">☕</div>
-                        <h4>Java</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🗄️</div>
-                        <h4>PostgreSQL</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="82"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-category">
-                <h3 class="category-title">工具与 DevOps</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">🐳</div>
-                        <h4>Docker</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">☁️</div>
-                        <h4>AWS</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="72"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🔧</div>
-                        <h4>Git</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">📦</div>
-                        <h4>CI/CD</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="78"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="skillsContainer"></div>
         </div>
     </section>
 
@@ -206,110 +83,7 @@
     <section id="projects" class="section projects">
         <div class="container">
             <h2 class="section-title">项目展示</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format" alt="项目1">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>数据可视化平台</h3>
-                        <p>基于 React + D3.js 构建的企业级数据分析仪表板，支持实时数据更新和自定义图表。</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">TypeScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format" alt="项目2">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>电商平台</h3>
-                        <p>全栈电商解决方案，包含商品管理、订单处理、支付集成和后台管理系统。</p>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=500&fit=crop&auto=format" alt="项目3">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>即时通讯应用</h3>
-                        <p>基于 WebSocket 的实时聊天应用，支持群组、文件传输和端到端加密。</p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">WebSocket</span>
-                            <span class="tag">Redis</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&auto=format" alt="项目4">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI 图像识别服务</h3>
-                        <p>基于深度学习的图像识别 API 服务，提供高精度的物体检测和分类能力。</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">FastAPI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=500&fit=crop&auto=format" alt="项目5">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>项目管理工具</h3>
-                        <p>团队协作项目管理平台，支持看板、甘特图、任务分配和进度追踪。</p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Prisma</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format" alt="项目6">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>运动健康 App</h3>
-                        <p>跨平台运动追踪应用，集成 GPS 定位、运动数据统计和社交分享功能。</p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Google Maps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="projects-grid" id="projectsContainer"></div>
         </div>
     </section>
 
@@ -317,50 +91,7 @@
     <section id="blog" class="section blog">
         <div class="container">
             <h2 class="section-title">最新博客</h2>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=500&fit=crop&auto=format" alt="博客封面">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-10-15</span>
-                            <span class="blog-category">前端开发</span>
-                        </div>
-                        <h3 class="blog-title">React 18 并发特性深度解析</h3>
-                        <p class="blog-excerpt">深入探讨 React 18 的并发渲染、自动批处理和 Suspense 等新特性如何改善应用性能...</p>
-                        <a href="#" class="read-more">阅读全文 →</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop&auto=format" alt="博客封面">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-10-08</span>
-                            <span class="blog-category">架构设计</span>
-                        </div>
-                        <h3 class="blog-title">从零构建微服务架构的 10 个经验</h3>
-                        <p class="blog-excerpt">分享在实际项目中搭建微服务架构遇到的坑和解决方案，包括服务发现、链路追踪等...</p>
-                        <a href="#" class="read-more">阅读全文 →</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format" alt="博客封面">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-09-28</span>
-                            <span class="blog-category">DevOps</span>
-                        </div>
-                        <h3 class="blog-title">Docker + K8s 自动化部署实战</h3>
-                        <p class="blog-excerpt">完整的容器化部署流程，从 Dockerfile 编写到 Kubernetes 集群搭建和 CI/CD 集成...</p>
-                        <a href="#" class="read-more">阅读全文 →</a>
-                    </div>
-                </article>
-            </div>
+            <div class="blog-grid" id="blogContainer"></div>
         </div>
     </section>
 
@@ -369,29 +100,7 @@
         <div class="container">
             <h2 class="section-title">联系我</h2>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>邮箱</h4>
-                            <p>hello@example.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>位置</h4>
-                            <p>中国 · 北京</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💼</div>
-                        <div>
-                            <h4>工作状态</h4>
-                            <p>开放合作机会</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="contact-info" id="contactInfo"></div>
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="你的名字" required>
@@ -411,7 +120,7 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 张三. All rights reserved.</p>
+            <p>&copy; <span id="footerYear">2026</span> <span id="footerName">Portfolio</span>. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#home">首页</a>
                 <a href="#about">关于</a>
