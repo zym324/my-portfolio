@@ -21,6 +21,10 @@ const CONTENT_FILE = path.join(ROOT, 'content.json');
 const DATA_DIR = path.join(ROOT, 'data');
 const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
 
+// 兜底：任何未捕获的异常/拒绝都不让进程退出，只记录日志
+process.on('unhandledRejection', err => console.error('[unhandledRejection]', err));
+process.on('uncaughtException', err => console.error('[uncaughtException]', err));
+
 const MIME = {
     '.html': 'text/html; charset=utf-8',
     '.css': 'text/css; charset=utf-8',
