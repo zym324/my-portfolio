@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容管理后台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+    <!-- 登录 -->
+    <div id="loginView" class="login-wrap">
+        <form class="login-card" id="loginForm">
+            <h1>内容管理后台</h1>
+            <p class="login-tip">请输入管理员密码</p>
+            <input type="password" id="password" placeholder="管理员密码" autocomplete="current-password" required>
+            <button type="submit" class="btn btn-primary btn-full">登录</button>
+            <p class="login-error" id="loginError"></p>
+        </form>
+    </div>
+
+    <!-- 编辑器 -->
+    <div id="editorView" class="editor-wrap" hidden>
+        <header class="editor-header">
+            <div>
+                <h1>内容管理</h1>
+                <p class="editor-sub">修改后点击「保存」，网站立即生效</p>
+            </div>
+            <div class="editor-actions">
+                <a href="/" target="_blank" class="btn btn-secondary">预览网站</a>
+                <button class="btn btn-secondary" id="syncBtn" type="button">同步到 GitHub Pages</button>
+                <button class="btn btn-primary" id="saveBtn" type="button">保存</button>
+                <button class="btn btn-secondary" id="logoutBtn" type="button">退出</button>
+            </div>
+        </header>
+
+        <nav class="tab-bar" id="tabBar">
+            <button class="tab active" data-tab="profile">基本资料</button>
+            <button class="tab" data-tab="skills">技能</button>
+            <button class="tab" data-tab="projects">项目</button>
+            <button class="tab" data-tab="posts">博客</button>
+            <button class="tab" data-tab="contact">联系信息</button>
+        </nav>
+
+        <main class="editor-main">
+            <section class="panel active" data-panel="profile" id="panelProfile"></section>
+            <section class="panel" data-panel="skills" id="panelSkills"></section>
+            <section class="panel" data-panel="projects" id="panelProjects"></section>
+            <section class="panel" data-panel="posts" id="panelPosts"></section>
+            <section class="panel" data-panel="contact" id="panelContact"></section>
+        </main>
+
+        <div class="save-bar">
+            <span id="statusText" class="status-text"></span>
+            <button class="btn btn-primary" id="saveBtn2" type="button">保存修改</button>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
