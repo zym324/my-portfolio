@@ -6,6 +6,7 @@
     "description": "热爱创造优雅的数字体验，专注于构建高性能、可扩展的 Web 应用。",
     "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop&auto=format",
     "avatarAlt": "头像",
+    "adminUrl": "http://localhost:3100/admin",
     "about": [
       "你好！我是一名充满热情的全栈开发工程师，拥有 5+ 年的 Web 开发经验。我专注于构建现代化、高性能的 Web 应用程序。",
       "我相信优秀的代码不仅要能运行，更要优雅、可维护。我喜欢在技术与设计之间找到平衡，创造出让用户愉悦的产品体验。",
