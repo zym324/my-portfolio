@@ -151,6 +151,45 @@ async function syncToGitHub(commitMessage) {
     return { ok: true, commit: result.commit && result.commit.sha };
 }
 
+// ---------- 内容读取：优先 GitHub（持久化），回退本地 ----------
+async function fetchRemoteContent() {
+    if (!GH_TOKEN) return null;
+    const apiBase = `https://api.github.com/repos/${GH_REPO}/contents/${GH_PATH}`;
+    const res = await fetch(`${apiBase}?ref=${GH_BRANCH}`, {
+        headers: {
+            Authorization: `Bearer ${GH_TOKEN}`,
+            Accept: 'application/vnd.github+json',
+            'User-Agent': 'portfolio-backend'
+        }
+    });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const raw = Buffer.from(json.content, 'base64').toString('utf8');
+    return JSON.parse(raw);
+}
+
+async function getContent() {
+    try {
+        const remote = await fetchRemoteContent();
+        if (remote) return remote;
+    } catch (err) {
+        console.error('读取远程内容失败，回退本地:', err.message);
+    }
+    return readContent();
+}
+
+async function saveContent(data) {
+    try {
+        writeContent(data);
+    } catch (err) {
+        console.warn('本地写入失败（只读文件系统），仅提交到 GitHub:', err.message);
+    }
+    if (GH_TOKEN) {
+        return await syncToGitHub('更新网站内容');
+    }
+    return { ok: true, local: true };
+}
+
 // ---------- 静态文件 ----------
 function serveStatic(req, res, urlPath) {
     const decoded = decodeURIComponent(urlPath.split('?')[0]);
@@ -202,7 +241,8 @@ const server = http.createServer(async (req, res) => {
 
         // 读取内容（公开）
         if (urlPath === '/api/content' && req.method === 'GET') {
-            sendJson(res, 200, readContent());
+            const data = await getContent();
+            sendJson(res, 200, data);
             return;
         }
 
@@ -217,8 +257,8 @@ const server = http.createServer(async (req, res) => {
                 sendJson(res, 400, { error: '内容格式不正确：缺少 profile' });
                 return;
             }
-            writeContent(body);
-            sendJson(res, 200, { ok: true });
+            const result = await saveContent(body);
+            sendJson(res, 200, { ok: true, committed: !result.skipped, commit: result.commit || null });
             return;
         }
 
@@ -240,12 +280,16 @@ const server = http.createServer(async (req, res) => {
                 sendJson(res, 400, { error: '请填写完整信息' });
                 return;
             }
-            fs.mkdirSync(DATA_DIR, { recursive: true });
-            const list = fs.existsSync(MESSAGES_FILE)
-                ? JSON.parse(fs.readFileSync(MESSAGES_FILE, 'utf8'))
-                : [];
-            list.push({ ...body, at: new Date().toISOString() });
-            fs.writeFileSync(MESSAGES_FILE, JSON.stringify(list, null, 2), 'utf8');
+            try {
+                fs.mkdirSync(DATA_DIR, { recursive: true });
+                const list = fs.existsSync(MESSAGES_FILE)
+                    ? JSON.parse(fs.readFileSync(MESSAGES_FILE, 'utf8'))
+                    : [];
+                list.push({ ...body, at: new Date().toISOString() });
+                fs.writeFileSync(MESSAGES_FILE, JSON.stringify(list, null, 2), 'utf8');
+            } catch (err) {
+                console.warn('留言写入失败（可能为只读文件系统）:', err.message);
+            }
             sendJson(res, 200, { ok: true });
             return;
         }
