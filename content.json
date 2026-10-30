@@ -1,7 +1,7 @@
 {
   "profile": {
     "greeting": "你好，我是",
-    "name": "张三",
+    "name": "张益铭",
     "subtitle": "全栈开发工程师 | UI/UX 设计爱好者",
     "description": "热爱创造优雅的数字体验，专注于构建高性能、可扩展的 Web 应用。",
     "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=400&fit=crop&auto=format",
@@ -13,14 +13,35 @@
     ],
     "aboutImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format",
     "stats": [
-      { "number": "50+", "label": "完成项目" },
-      { "number": "5+", "label": "年经验" },
-      { "number": "30+", "label": "开源贡献" }
+      {
+        "number": "50+",
+        "label": "完成项目"
+      },
+      {
+        "number": "5+",
+        "label": "年经验"
+      },
+      {
+        "number": "30+",
+        "label": "开源贡献"
+      }
     ],
     "socials": [
-      { "name": "GitHub", "url": "#", "icon": "github" },
-      { "name": "LinkedIn", "url": "#", "icon": "linkedin" },
-      { "name": "Twitter", "url": "#", "icon": "twitter" }
+      {
+        "name": "GitHub",
+        "url": "#",
+        "icon": "github"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#",
+        "icon": "linkedin"
+      },
+      {
+        "name": "Twitter",
+        "url": "#",
+        "icon": "twitter"
+      }
     ]
   },
   "contact": {
@@ -32,28 +53,76 @@
     {
       "category": "前端开发",
       "items": [
-        { "name": "React", "icon": "⚛️", "level": 95 },
-        { "name": "Vue.js", "icon": "💚", "level": 90 },
-        { "name": "TypeScript", "icon": "📝", "level": 88 },
-        { "name": "TailwindCSS", "icon": "🎨", "level": 92 }
+        {
+          "name": "React",
+          "icon": "⚛️",
+          "level": 95
+        },
+        {
+          "name": "Vue.js",
+          "icon": "💚",
+          "level": 90
+        },
+        {
+          "name": "TypeScript",
+          "icon": "📝",
+          "level": 88
+        },
+        {
+          "name": "TailwindCSS",
+          "icon": "🎨",
+          "level": 92
+        }
       ]
     },
     {
       "category": "后端开发",
       "items": [
-        { "name": "Node.js", "icon": "🟢", "level": 90 },
-        { "name": "Python", "icon": "🐍", "level": 85 },
-        { "name": "Java", "icon": "☕", "level": 75 },
-        { "name": "PostgreSQL", "icon": "🗄️", "level": 82 }
+        {
+          "name": "Node.js",
+          "icon": "🟢",
+          "level": 90
+        },
+        {
+          "name": "Python",
+          "icon": "🐍",
+          "level": 85
+        },
+        {
+          "name": "Java",
+          "icon": "☕",
+          "level": 75
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "🗄️",
+          "level": 82
+        }
       ]
     },
     {
       "category": "工具与 DevOps",
       "items": [
-        { "name": "Docker", "icon": "🐳", "level": 80 },
-        { "name": "AWS", "icon": "☁️", "level": 72 },
-        { "name": "Git", "icon": "🔧", "level": 95 },
-        { "name": "CI/CD", "icon": "📦", "level": 78 }
+        {
+          "name": "Docker",
+          "icon": "🐳",
+          "level": 80
+        },
+        {
+          "name": "AWS",
+          "icon": "☁️",
+          "level": 72
+        },
+        {
+          "name": "Git",
+          "icon": "🔧",
+          "level": 95
+        },
+        {
+          "name": "CI/CD",
+          "icon": "📦",
+          "level": 78
+        }
       ]
     }
   ],
@@ -62,42 +131,66 @@
       "title": "数据可视化平台",
       "description": "基于 React + D3.js 构建的企业级数据分析仪表板，支持实时数据更新和自定义图表。",
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format",
-      "tags": ["React", "D3.js", "TypeScript"],
+      "tags": [
+        "React",
+        "D3.js",
+        "TypeScript"
+      ],
       "link": "#"
     },
     {
       "title": "电商平台",
       "description": "全栈电商解决方案，包含商品管理、订单处理、支付集成和后台管理系统。",
       "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format",
-      "tags": ["Vue.js", "Node.js", "MongoDB"],
+      "tags": [
+        "Vue.js",
+        "Node.js",
+        "MongoDB"
+      ],
       "link": "#"
     },
     {
       "title": "即时通讯应用",
       "description": "基于 WebSocket 的实时聊天应用，支持群组、文件传输和端到端加密。",
       "image": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=500&fit=crop&auto=format",
-      "tags": ["React Native", "WebSocket", "Redis"],
+      "tags": [
+        "React Native",
+        "WebSocket",
+        "Redis"
+      ],
       "link": "#"
     },
     {
       "title": "AI 图像识别服务",
       "description": "基于深度学习的图像识别 API 服务，提供高精度的物体检测和分类能力。",
       "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&auto=format",
-      "tags": ["Python", "TensorFlow", "FastAPI"],
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "FastAPI"
+      ],
       "link": "#"
     },
     {
       "title": "项目管理工具",
       "description": "团队协作项目管理平台，支持看板、甘特图、任务分配和进度追踪。",
       "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=500&fit=crop&auto=format",
-      "tags": ["Next.js", "PostgreSQL", "Prisma"],
+      "tags": [
+        "Next.js",
+        "PostgreSQL",
+        "Prisma"
+      ],
       "link": "#"
     },
     {
       "title": "运动健康 App",
       "description": "跨平台运动追踪应用，集成 GPS 定位、运动数据统计和社交分享功能。",
       "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=500&fit=crop&auto=format",
-      "tags": ["Flutter", "Firebase", "Google Maps"],
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "Google Maps"
+      ],
       "link": "#"
     }
   ],
